@@ -1,0 +1,33 @@
+@font-face{
+	font-family : header;
+	src : url(./Fonts/Roboto-Bold.ttf);
+}
+@font-face{
+	font-family : body;
+	src : url(./Fonts/Roboto-Regular.ttf);
+}
+body{
+	padding-left: 2rem;
+}
+h2{
+	font-family: header;
+	padding-bottom: 2rem;
+}
+
+p{
+	font-family: body;
+}
+
+a:link {
+	text-decoration: none;
+	color :#0000ee;
+
+}
+a:visited {
+	color :#0000ee;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration : underline;
+}
+
