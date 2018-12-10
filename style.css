@@ -1,33 +1,49 @@
 @font-face{
-	font-family : header;
-	src : url(./Fonts/Roboto-Bold.ttf);
+	font-family : header;   /* Giving Name to font which is imported */
+	src : url(./Fonts/Roboto-Bold.ttf);  /* Importing Font */
 }
 @font-face{
-	font-family : body;
-	src : url(./Fonts/Roboto-Regular.ttf);
+	font-family : body;  /* Giving Name to font which is imported */
+	src : url(./Fonts/Roboto-Regular.ttf);  /* Importing Font */
 }
 body{
-	padding-left: 2rem;
+	margin :0%;
 }
+.container {
+	/* background-color: #000000; */
+	margin : auto;
+	width: 80%
+}
+
+/* h2 tag styling */
 h2{
-	font-family: header;
+	font-family: header;  /* Header is the user defined font declared on line 3 */ 
 	padding-bottom: 2rem;
+	font-size : 24px;
 }
 
+/* p tag styling */
 p{
-	font-family: body;
+	font-family: body;  /* Body is the user defined font declared on line 7 */
+	font-size: 18px;
 }
 
+/* Anchor Tag styling */
+
+/* a:link -> unvisited links styling */
 a:link {
 	text-decoration: none;
 	color :#0000ee;
 
 }
+
+/* Visited Link Styling */
 a:visited {
-	color :#0000ee;
 	text-decoration: none;
+	color :#0000ee;
 }
+
+/* Styling Links When hovered */
 a:hover{
 	text-decoration : underline;
 }
-
