@@ -6,44 +6,135 @@
 	font-family : body;  /* Giving Name to font which is imported */
 	src : url(./Fonts/Roboto-Regular.ttf);  /* Importing Font */
 }
+*{
+	margin: 0%;
+	padding: 0%;
+}
 body{
 	margin :0%;
+	background-color: #f4f4f4;
+}
+a{
+	text-decoration: none;
 }
 .container {
 	/* background-color: #000000; */
 	margin : auto;
-	width: 80%
+	width: 80%;
+}
+.header{
+	margin: 2em 2em 2em 0em;
+}
+.but{
+	margin: 0em 0em 1.2em 0em;
+	border: none;
+	text-align-last: center;	
 }
 
-/* h2 tag styling */
-h2{
-	font-family: header;  /* Header is the user defined font declared on line 3 */ 
-	padding-bottom: 2rem;
-	font-size : 24px;
+@media (min-width: 0px) and (max-width: 480px){
+	.header{
+		display:none;
+	}
+	.main{
+		width: 50%;
+		margin: 15% 40%;
+	}
+	.large{
+		padding: .6em 2.3em;
+		background: #c9c5c5;
+		font-family: header;
+		font-size: .4em;
+	}
+	.large:hover{
+		background-color: #2098d1;
+	}
+	.small{
+		width: auto;
+		padding: .7em 1.6em;
+		background-color: #c9c5c5;
+		font-family: body;
+		font-size: .4em;
+	}
+	.small:hover{
+		background-color: #2098d1;
+	}
+}
+@media (min-width: 481px) and (max-width: 767px){
+	.header{
+		display:none;
+	}
+	.main{
+		width: 50%;
+		margin: 15% 40%;
+	}
+	.large{
+		padding: .7em 2.5em;
+		background: #c9c5c5;
+		font-family: header;
+		font-size: .5em;
+	}
+	.large:hover{
+		background-color: #2098d1;
+	}
+	.small{
+		width: auto;
+		padding: .8em 1.8em;
+		background-color: #c9c5c5;
+		font-family: body;
+		font-size: .5em;
+	}
+	.small:hover{
+		background-color: #2098d1;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 1024px){
+	.large{
+		padding: .8em 2.6em;
+		background: #c9c5c5;
+		font-family: header;
+		font-size: .6em;
+	}
+	.large:hover{
+		background-color: #2098d1;
+	}
+	.small{
+		width: auto;
+		padding: 1em 2em;
+		background-color: #c9c5c5;
+		font-family: body;
+		font-size: .6em;
+	}
+	.small:hover{
+		background-color: #2098d1;
+	}
 }
 
-/* p tag styling */
-p{
-	font-family: body;  /* Body is the user defined font declared on line 7 */
-	font-size: 18px;
+@media (min-width: 1025px){
+	.large{
+		padding: 1em 2.7em;
+		background-color: #c9c5c5;
+		font-family: header;
+		font-size: .7em;
+	}
+	.large:hover{
+		background-color: #2098d1;
+	}
+	.small{
+		width: auto;
+		padding: 1.3em 2.5em;
+		background-color: #c9c5c5;
+		font-family: body;
+		font-size: .7em;
+	}
+	.small:hover{
+		background-color: #2098d1;
+	}
+} 
+
+.subject{
+	width:auto;
 }
-
-/* Anchor Tag styling */
-
-/* a:link -> unvisited links styling */
-a:link {
-	text-decoration: none;
-	color :#0000ee;
-
-}
-
-/* Visited Link Styling */
-a:visited {
-	text-decoration: none;
-	color :#0000ee;
-}
-
-/* Styling Links When hovered */
-a:hover{
-	text-decoration : underline;
+.year{
+	width: 14em;
 }
