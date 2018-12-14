@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+<input type="button" class="but large" value="Computer">
+
+<input type="button" class="but large" value="I Scheme">
+
+<input type="button" class="but large" value="Sem III">
+
+<input type="button" class="but large" value="Computer"> 
+
+<input type="button" class="but small year" value="2018 Summer">
+
+<input type="button" class="but small year" value="2017 Winter">
+
+<input type="button" class="but small year" value="2017 Summer">
+
+<input type="button" class="but small year" value="2016 Winter">
+
+<input type="button" class="but small year" value="2016 Summer">
+
+<input type="button" class="but small year" value="2015 Winter">
+
+<input type="button" class="but small year" value="2015 Summer">
+
+<input type="button" class="but small year" value="2014 Winter">
