@@ -18,12 +18,17 @@ a{
 	text-decoration: none;
 }
 .container {
-	/* background-color: #000000; */
-	margin : auto;
-	width: 80%;
+	margin : 2em auto auto auto;
+	width: 90%;
 }
 .header{
-	margin: 2em 2em 2em 0em;
+	/* width: 100%; */
+	/* background-color: #0059ff; */
+	margin-bottom: 2em;
+	text-align-last: center;
+}
+.main{
+	text-align-last: center;
 }
 .but{
 	margin: 0em 0em 1.2em 0em;
@@ -36,8 +41,7 @@ a{
 		display:none;
 	}
 	.main{
-		width: 50%;
-		margin: 15% 40%;
+		margin-top: 5em;
 	}
 	.large{
 		padding: .7em 2.5em;
@@ -64,8 +68,7 @@ a{
 		display:none;
 	}
 	.main{
-		width: 50%;
-		margin: 15% 40%;
+		margin-top: 5em;
 	}
 	.large{
 		padding: .7em 2.5em;
@@ -89,11 +92,18 @@ a{
 
 }
 @media (min-width: 768px) and (max-width: 1024px){
+	.header{
+		width: 100%;
+		margin: 2em auto;
+	}
+	.main{
+		font-size: .7em;
+	}
 	.large{
 		padding: .8em 2.6em;
 		background: #c9c5c5;
 		font-family: header;
-		font-size: .8em;
+		font-size: .6em;
 	}
 	.large:hover{
 		background-color: #2098d1;
@@ -103,7 +113,6 @@ a{
 		padding: 1em 2em;
 		background-color: #c9c5c5;
 		font-family: body;
-		font-size: .8em;
 	}
 	.small:hover{
 		background-color: #2098d1;
@@ -112,7 +121,7 @@ a{
 
 @media (min-width: 1025px){
 	.large{
-		padding: 1em 2.7em;
+		padding: .6em 2.3em;
 		background-color: #c9c5c5;
 		font-family: header;
 		font-size: .9em;
