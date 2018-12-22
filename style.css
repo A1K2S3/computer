@@ -13,7 +13,9 @@ a{
 .container{
 	width: 100%;
 }
-
+.header{
+	color: #ffffff;
+}
 .header .but{
 	transition: all .2s;
 }
