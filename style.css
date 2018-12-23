@@ -7,6 +7,9 @@ body{
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #feb41d;
 }
+button{
+	outline: none; 
+}
 a{
 	text-decoration: none;
 }
