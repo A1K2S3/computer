@@ -16,6 +16,9 @@ a{
 .container{
 	width: 100%;
 }
+button {
+	outline:none;
+}
 .header{
 	color: #ffffff;
 }
