@@ -21,9 +21,29 @@ var gsub = {
           4 : "Applied Chemistry",
           5 : "Communication Skills",
           6 : "Engineering Mathematics"
-     }
+     },
      semIII : {
           1 : "Digital Techniques",
+          2 : "Electrical Technology",
+          3 : "Applied Mathematics",
+          4 : "Datastructure using C",
+          5 : "Rational Database Management system"
+     },
+     semIV : {
+          1 : "Computer Network",
+          2 : "Object Oriented Programming",
+          3 : "Microprocessor and Programming",
+          4 : "Commuter Hardware and Maintenance"
+     },
+     semV : {
+          1 : "Operating System",
+          2 : "Computer Security",
+          3 : "Java Programming",
+          4 : "Software Engineering",
+          5 : "System Programming"
+     },
+     semVI : {
+          1 : ""       
      }
 }
 
