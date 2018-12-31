@@ -22,6 +22,9 @@ var gsub = {
           5 : "Communication Skills",
           6 : "Engineering Mathematics"
      }
+     semIII : {
+          1 : "Digital Techniques",
+     }
 }
 
 
