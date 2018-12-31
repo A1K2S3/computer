@@ -7,7 +7,7 @@ body{
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #feb41d;
 }
-button{
+.button{
 	outline: none; 
 }
 a{
@@ -43,6 +43,7 @@ button {
 		border: 1.3px solid #ffffff80;
 		background-color: transparent;
 		color: #fff;
+		margin-top: .5em;
 	}
 	.header{
 		display:none;
@@ -77,6 +78,7 @@ button {
 		border: 1.3px solid #ffffff80;
 		background-color: transparent;
 		color: #fff;
+		margin-top: .5em;
 	}
 	.header{
 		display:none;
@@ -118,6 +120,7 @@ button {
 		/* border: 1.3px solid #ffffff80; */
 		background-color: transparent;
 		/* color: #fff; */
+	margin-top: .5em;
 	}
 	.header .but{
 		padding: .8em 2.5em;
@@ -152,6 +155,7 @@ button {
 		border: 1.3px solid #ffffff80;
 		background-color: transparent;
 		color: #fff;
+		margin-top: .5em;
 	}
 	.small{
 		margin: .5em 0em;
@@ -166,7 +170,6 @@ button {
 		color: #1c597c;
 	}
 }
-
 .subject{
 	width: auto;
 }
