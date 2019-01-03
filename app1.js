@@ -7,6 +7,7 @@ var large   = "large";
 var year    = "year";
 var subject = "subject";
 
+var hsub = $('.header .sub .input').val();
 
 var scheme = ["G Scheme", "I Scheme"];
 
@@ -107,7 +108,7 @@ function remove(){
      $('.main .sub .gscheme .semII .engineeringmathematics input').remove();
 
 
-     $('.main .sub .gscheme .semIII .digitltechniques input').remove();
+     $('.main .sub .gscheme .semIII .digitaltechniques input').remove();
      $('.main .sub .gscheme .semIII .electricaltechnology input').remove();
      $('.main .sub .gscheme .semIII .appliedmathematics input').remove();
      $('.main .sub .gscheme .semIII .datastructure input').remove();
@@ -164,7 +165,7 @@ function remove(){
 
 
 
-function button(path, value){
+function hbutton(path, value){
 
      $(path).append(`
           <input type = "button" value = "${value}" class = "but large">
@@ -203,6 +204,63 @@ function reset(){
 
 
 
+function gschemeclicked(){
+
+     remove();
+     reset();
+     val = 1;
+
+     hbutton(".header .scheme", 'Scheme');
+
+     mbutton('.main .sem .semI',   sem[ 0 ], year);
+     mbutton('.main .sem .semII',  sem[ 1 ], year);
+     mbutton('.main .sem .semIII', sem[ 2 ], year);
+     mbutton('.main .sem .semIV',  sem[ 3 ], year);
+     mbutton('.main .sem .semV',   sem[ 4 ], year);
+     mbutton('.main .sem .semVI',  sem[ 5 ], year);
+
+}
+
+
+function ischemeclicked(){
+
+     remove();
+     reset();
+     val = 0;
+     
+     hbutton('.header .scheme', 'Scheme');
+     
+     mbutton('.main .sem .semI',   sem[ 0 ], year);
+     mbutton('.main .sem .semII',  sem[ 1 ], year);
+     mbutton('.main .sem .semIII', sem[ 2 ], year);
+     
+}
+
+function showexambtn(){
+
+     remove();
+     reset();
+     hbutton();
+     mbutton('.main .exam .section .s18', "Summer 2018");
+     mbutton('.main .exam .section .s17', "Summer 2017");
+     mbutton('.main .exam .section .s16', "Summer 2016");
+     mbutton('.main .exam .section .s15', "Summer 2015");
+     mbutton('.main .exam .section .w18', "Winter 2018");
+     mbutton('.main .exam .section .w17', "Winter 2017");
+     mbutton('.main .exam .section .w16', "Winter 2016");
+     mbutton('.main .exam .section .w15', "Winter 2015");
+     mbutton('.main .exam .section .w14', "Winter 2014");
+     
+}
+
+
+function a(path, link){
+
+     $(path).append(`
+          <a href = " ${link} ">
+     `);
+     
+}
 
 
 
@@ -218,44 +276,49 @@ $('document').ready(function(){
      }
      mainpage();
 
-     $('.main .scheme .gscheme').click(function(){
+     $('.header .scheme').click(function(){
+          
+          remove(); 
+          mainpage();
+
+     });
+
+     $('.header .sem').click(function(){
 
           remove();
           reset();
-          val = 1;
 
-          button(".header .scheme", 'Scheme');
+          if(val == 1){
 
-          mbutton('.main .sem .semI',   sem[ 0 ]);
-          mbutton('.main .sem .semII',  sem[ 1 ]);
-          mbutton('.main .sem .semIII', sem[ 2 ]);
-          mbutton('.main .sem .semIV',  sem[ 3 ]);
-          mbutton('.main .sem .semV',   sem[ 4 ]);
-          mbutton('.main .sem .semVI',  sem[ 5 ]);
+               gschemeclicked();
 
+          }
+          if(val == 0){
+
+               ischemeclicked();
+               
+          }
+
+     });
+     
+     $('.main .scheme .gscheme').click(function(){
+          gschemeclicked();
+          
      });
 
      $('.main .scheme .ischeme').click(function(){
-
-          remove();
-          reset();
-          val = 0;
-          
-          button('.header .scheme', 'Scheme');
-          
-          mbutton('.main .sem .semI', sem[ 0 ], year);
-          mbutton('.main .sem .semI', sem[ 1 ], year);
-          mbutton('.main .sem .semI', sem[ 2 ], year);
+          ischemeclicked();
           
      });
+
 
      $('.main .sem .semI').click(function(){
 
           remove();
           reset();
           
-          button('.header .scheme', "Scheme");
-          button('.header .sem', "Sem");
+          hbutton('.header .scheme', "Scheme");
+          hbutton('.header .sem', "Sem");
           if(val == 1){
 
                mbutton('.main .sub .gscheme .semI .english',          gsub.semI[ 1 ], subject);
@@ -287,21 +350,114 @@ $('document').ready(function(){
                mbutton('.main .sub .gscheme .semII .progamminginc',          gsub.semII[ 2 ], subject);
                mbutton('.main .sub .gscheme .semII .basicelectronics',       gsub.semII[ 3 ], subject);
                mbutton('.main .sub .gscheme .semII .appliedchemistry',       gsub.semII[ 4 ], subject);
-               mbutton('.main .sub .gscheme .semII .communicationskills',    gsub.semII[ 4 ], subject);
-               mbutton('.main .sub .gscheme .semII .engineeringmathematics', gsub.semII[ 4 ], subject);
+               mbutton('.main .sub .gscheme .semII .communicationskills',    gsub.semII[ 5 ], subject);
+               mbutton('.main .sub .gscheme .semII .engineeringmathematics', gsub.semII[ 6 ], subject);
                
           }
           if(val == 0){
 
-               mbutton('.main .sub .ischeme .semII .basicelectronics',                gsub.semII[ 1 ], subject);
-               mbutton('.main .sub .ischeme .semII .programminginc',                  gsub.semII[ 2 ], subject);
-               mbutton('.main .sub .ischeme .semII .appliedmathematics',              gsub.semII[ 3 ], subject);
-               mbutton('.main .sub .ischeme .semII .elementsofelectricalengineering', gsub.semII[ 4 ], subject);
+               mbutton('.main .sub .ischeme .semII .basicelectronics',                isub.semII[ 1 ], subject);
+               mbutton('.main .sub .ischeme .semII .programminginc',                  isub.semII[ 2 ], subject);
+               mbutton('.main .sub .ischeme .semII .appliedmathematics',              isub.semII[ 3 ], subject);
+               mbutton('.main .sub .ischeme .semII .elementsofelectricalengineering', isub.semII[ 4 ], subject);
                
           }
           
      });
+
+     $('.main .sem .semIII ').click(function(){
+
+          remove();
+          reset();
+
+          hbutton('.header .scheme', "Scheme");
+          hbutton('.header .sem', "Sem");
+
+          if(val == 1){
+
+               mbutton('.main .sub .gscheme .semIII .digitaltechniques',    gsub.semIII[ 1 ]);
+               mbutton('.main .sub .gscheme .semIII .electricaltechnology', gsub.semIII[ 2 ]);
+               mbutton('.main .sub .gscheme .semIII .appliedmathematics',   gsub.semIII[ 3 ]);
+               mbutton('.main .sub .gscheme .semIII .datastructure',        gsub.semIII[ 4 ]);
+               mbutton('.main .sub .gscheme .semIII .database',             gsub.semIII[ 5 ]);
+               
+          }
+          if(val == 0){
+
+               mbutton('.main .sub .ischeme .semIII .datastructure',             isub.semIII[ 3 ], subject);
+               mbutton('.main .sub .ischeme .semIII .digitaltechniques',         isub.semIII[ 1 ], subject);
+               mbutton('.main .sub .ischeme .semIII .computergraphics',          isub.semIII[ 2 ], subject);
+               mbutton('.main .sub .ischeme .semIII .objectorientedprogramming', isub.semIII[ 4 ], subject);
+               mbutton('.main .sub .ischeme .semIII .database',                  isub.semIII[ 5 ], subject);
+               
+          }
+          
+     });
+
+     $('.main .sem .semIV').click(function(){
+
+          remove();
+          reset();
+
+          hbutton('.header .scheme', "Scheme");
+          hbutton('.header .sem', "Sem");
+
+          if(val == 1){
+
+               mbutton('.main .sub .gscheme .semIV .computernetwork',                gsub.semIV[ 1 ]);
+               mbutton('.main .sub .gscheme .semIV .objectorientedprogramming',      gsub.semIV[ 2 ]);
+               mbutton('.main .sub .gscheme .semIV .microprocessor',                 gsub.semIV[ 3 ]);
+               mbutton('.main .sub .gscheme .semIV .computerhardwareandmaintenance', gsub.semIV[ 4 ]);
+               
+          }
+          
+     });
+     $('.main .sem .semV').click(function(){
+
+          remove();
+          reset();
+
+          hbutton('.header .scheme', "Scheme");
+          hbutton('.header .sem', "Sem");
+
+          if(val == 1){
+
+               mbutton('.main .sub .gscheme .semV .operatingsystem',     gsub.semV[ 1 ]);
+               mbutton('.main .sub .gscheme .semV .compuersecurity',     gsub.semV[ 2 ]);
+               mbutton('.main .sub .gscheme .semV .javaprogramming',     gsub.semV[ 3 ]);
+               mbutton('.main .sub .gscheme .semV .softwareengineering', gsub.semV[ 4 ]);
+               mbutton('.main .sub .gscheme .semV .systemprogramming',   gsub.semV[ 5 ]);
+               
+          }
+          
+     });
+     $('.main .sem .semVI').click(function(){
+
+          remove();
+          reset();
+
+          hbutton('.header .scheme', "Scheme");
+          hbutton('.header .sem', "Sem");
+
+          if(val == 1){
+
+               mbutton('.main .sub .gscheme .semVI .softwaretesting',        gsub.semVI[ 1 ], subject);
+               mbutton('.main .sub .gscheme .semVI .emeddedsystem',          gsub.semVI[ 2 ], subject);
+               mbutton('.main .sub .gscheme .semVI .advancedmicroprocessor', gsub.semVI[ 3 ], subject);
+               mbutton('.main .sub .gscheme .semVI .database',               gsub.semVI[ 4 ], subject);
+               
+          }
+          
+     });
+
+     $('.main .sub .gscheme .semI .english').click(function(){
+
+          showexambtn();
+          a('.main .exam .section .s18', './Apology.html')
+
+     });
      
+
      
      
 });

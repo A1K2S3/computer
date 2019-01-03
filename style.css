@@ -6,6 +6,7 @@
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #feb41d;
+	letter-spacing: 2px;
 }
 button{
 	outline: none; 
@@ -41,6 +42,17 @@ button {
 	display:inline;
 }
 
+.main .exam{
+	width: 35%;
+	margin:auto ;
+}
+
+.section{
+	float: left;
+	margin-left: 8px;
+	margin-top: 4em;
+	
+}
 @media (min-width: 320px) and (max-width: 480px){
 	.but{
 		padding: 1.3em 4.5em;
