@@ -22,6 +22,7 @@ button {
 .header{
 	color: #ffffff;
 }
+
 .header .but{
 	transition: all .2s;
 }
@@ -35,6 +36,9 @@ button {
 .main .but:hover{
 	border-radius: 30px;
 	background-color: #ffbe3b; 
+}
+.header div{
+	display:inline;
 }
 
 @media (min-width: 320px) and (max-width: 480px){
@@ -160,10 +164,12 @@ button {
 	.header .but{
 		border:  1.3px solid #ffbe3b;
 		color: #ffbe3b;
+		display: inline;
 	}
 	.main .but{
 		border:  1.3px solid #1c597c;
 		color: #1c597c;
+		margin-top: .5em;
 	}
 }
 
