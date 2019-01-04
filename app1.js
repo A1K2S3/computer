@@ -1,4 +1,4 @@
-var path,value, class1,val;
+var path,value, class1,val,hsub;
 
 
 var btn     = "but";
@@ -7,7 +7,6 @@ var large   = "large";
 var year    = "year";
 var subject = "subject";
 
-var hsub = $('.header .sub .input').val();
 
 var scheme = ["G Scheme", "I Scheme"];
 
@@ -148,15 +147,15 @@ function remove(){
 
      
      
-     $('main .exam .section .s18 input').remove();
-     $('main .exam .section .s17 input').remove();
-     $('main .exam .section .s16 input').remove();
-     $('main .exam .section .s15 input').remove();
-     $('main .exam .section .w18 input').remove();
-     $('main .exam .section .w17 input').remove();
-     $('main .exam .section .w16 input').remove();
-     $('main .exam .section .w15 input').remove();
-     $('main .exam .section .w14 input').remove();
+     $('.main .exam .section .s18 a input').remove();
+     $('.main .exam .section .s17 a input').remove();
+     $('.main .exam .section .s16 a input').remove();
+     $('.main .exam .section .s15 a input').remove();
+     $('.main .exam .section .w18 a input').remove();
+     $('.main .exam .section .w17 a input').remove();
+     $('.main .exam .section .w16 a input').remove();
+     $('.main .exam .section .w15 a input').remove();
+     $('.main .exam .section .w14 a input').remove();
 
      console.log(`Every html element removed.`);
 }
@@ -241,16 +240,19 @@ function showexambtn(){
      remove();
      reset();
      hbutton();
-     mbutton('.main .exam .section .s18', "Summer 2018");
-     mbutton('.main .exam .section .s17', "Summer 2017");
-     mbutton('.main .exam .section .s16', "Summer 2016");
-     mbutton('.main .exam .section .s15', "Summer 2015");
-     mbutton('.main .exam .section .w18', "Winter 2018");
-     mbutton('.main .exam .section .w17', "Winter 2017");
-     mbutton('.main .exam .section .w16', "Winter 2016");
-     mbutton('.main .exam .section .w15', "Winter 2015");
-     mbutton('.main .exam .section .w14', "Winter 2014");
-     
+     mbutton('.main .exam .section .s18 a', "Summer 2018", year);
+     mbutton('.main .exam .section .s17 a', "Summer 2017", year);
+     mbutton('.main .exam .section .s16 a', "Summer 2016", year);
+     mbutton('.main .exam .section .s15 a', "Summer 2015", year);
+     mbutton('.main .exam .section .w18 a', "Winter 2018", year);
+     mbutton('.main .exam .section .w17 a', "Winter 2017", year);
+     mbutton('.main .exam .section .w16 a', "Winter 2016", year);
+     mbutton('.main .exam .section .w15 a', "Winter 2015", year);
+     mbutton('.main .exam .section .w14 a', "Winter 2014", year);
+     hbutton('.header .scheme', "Scheme");
+     hbutton('.header .sem', "Sem");
+     hbutton('.header .sub', "Sub");
+
 }
 
 
@@ -449,13 +451,444 @@ $('document').ready(function(){
           }
           
      });
-
+     // G Scheme SemI
      $('.main .sub .gscheme .semI .english').click(function(){
-
+          remove();
+          reset();
+          hsub = 1;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
           showexambtn();
-          a('.main .exam .section .s18', './Apology.html')
 
      });
+     $('.main .sub .gscheme .semI .basicphysics').click(function(){
+
+          hsub = 2;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semI .basicchemistry').click(function(){
+
+          hsub = 3;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semI .basicmathematics').click(function(){
+
+          hsub = 4;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     // G Scheme SemII
+     $('.main .sub .gscheme .semII .appliedphysics').click(function(){
+
+          hsub = 5;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semII .basicelectronics').click(function(){
+
+          hsub = 6;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semII .appliedchemistry').click(function(){
+
+          hsub = 7;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semII .progamminginc').click(function(){
+
+          hsub = 8;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semII .communicationskills').click(function(){
+
+          hsub = 9;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semII .engineeringmathematics').click(function(){
+
+          hsub = 10;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     // G Scheme SemIII
+     $('.main .sub .gscheme .semIII .digitaltechniques').click(function(){
+
+          hsub = 11;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semIII .electricaltechnology').click(function(){
+
+          hsub = 12;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semIII .appliedmathematics').click(function(){
+
+          hsub = 13;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semIII .datastructure').click(function(){
+
+          hsub = 14;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semIII .database').click(function(){
+
+          hsub = 15;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     // G Scheme SemIV
+     $('.main .sub .gscheme .semIV .computernetwork').click(function(){
+
+          hsub = 16;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semIV .objectorientedprogramming').click(function(){
+
+          hsub = 17;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semIV .microprocessor').click(function(){
+
+          hsub = 18;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semIV .computerhardwareandmaintenance').click(function(){
+
+          hsub = 19;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     // G Scheme semV
+     $('.main .sub .gscheme .semV .operatingsystem').click(function(){
+
+          hsub = 20;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semV .compuersecurity').click(function(){
+
+          hsub = 21;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semV .javaprogramming').click(function(){
+
+          hsub = 22;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semV .softwareengineering').click(function(){
+
+          hsub = 23;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semV .systemprogramming').click(function(){
+
+          hsub = 24;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     // G Scheme semVI
+     $('.main .sub .gscheme .semVI .softwaretesting').click(function(){
+
+          hsub = 25;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semVI .emeddedsystem').click(function(){
+
+          hsub = 26;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semVI .advancedmicroprocessor').click(function(){
+
+          hsub = 27;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+     $('.main .sub .gscheme .semVI .database').click(function(){
+
+          hsub = 28;
+          a('.main .exam .section .s18', ' link ');
+          a('.main .exam .section .s17', ' link ');
+          a('.main .exam .section .s16', ' link ');
+          a('.main .exam .section .s15', ' link ');
+          a('.main .exam .section .w18', ' link ');
+          a('.main .exam .section .w17', ' link ');
+          a('.main .exam .section .w16', ' link ');
+          a('.main .exam .section .w15', ' link ');
+          a('.main .exam .section .w14', ' link ');
+          showexambtn();
+
+     });
+
+     // $('.header .sub').click(function(){
+
+     //      switch(hsub){
+
+     //           case '1' : 
+
+               
+     //      }          
+
+     // });
      
 
      
