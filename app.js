@@ -1293,7 +1293,7 @@ $('document').ready(function(){
           hoyear();
           link(
                'l1',
-               'https://a1k2s3.github.io/computer/Computer/I%20Scheme/Semesters/Sem%20III/Digital%20techniques.html',
+               './Apology.html',
                'l3',
                'l4',
                'l5',
