@@ -1,4 +1,4 @@
-var path,value, class1,val,hsub;
+var path,value, class1,val,hsub,fbtn1;
 var btn     = "but";
 var small   = "small";
 var large   = "large";
@@ -278,6 +278,7 @@ function mainpage(){
           console.log(`Page loaded`);
           
      }
+     remove();
      set();
      mbutton('.main .scheme .gscheme', scheme[ 0 ], year);
      mbutton('.main .scheme .ischeme', scheme[ 1 ], year);         
@@ -320,72 +321,23 @@ function hsub(){
      switch(hsub){
 
           case 1: 
-               hsub = 1;
-               mbutton('.main .sub .gscheme .semI .english',          gsub.semI[ 1 ], subject);
-               mbutton('.main .sub .gscheme .semI .basicphysics',     gsub.semI[ 2 ], subject);
-               mbutton('.main .sub .gscheme .semI .basicchemistry',   gsub.semI[ 3 ], subject);
-               mbutton('.main .sub .gscheme .semI .basicmathematics', gsub.semI[ 4 ], subject);
+               msem.I();
           break;
           case 2:
-               mbutton('.main .sub .ischeme .semI .english',          isub.semI[ 1 ], subject);
-               mbutton('.main .sub .ischeme .semI .basicscience',     isub.semI[ 2 ], subject);
-               mbutton('.main .sub .ischeme .semI .basicmathematics', isub.semI[ 3 ], subject);
+               msem.II();
           break;
           case 3:
-               hsub = 3;
-               mbutton('.main .sub .gscheme .semII .appliedphysics',         gsub.semII[ 1 ], subject);
-               mbutton('.main .sub .gscheme .semII .progamminginc',          gsub.semII[ 2 ], subject);
-               mbutton('.main .sub .gscheme .semII .basicelectronics',       gsub.semII[ 3 ], subject);
-               mbutton('.main .sub .gscheme .semII .appliedchemistry',       gsub.semII[ 4 ], subject);
-               mbutton('.main .sub .gscheme .semII .communicationskills',    gsub.semII[ 5 ], subject);
-               mbutton('.main .sub .gscheme .semII .engineeringmathematics', gsub.semII[ 6 ], subject);
-     break;
-     case 4:
-          hsub = 4;
-          mbutton('.main .sub .ischeme .semII .basicelectronics',                isub.semII[ 1 ], subject);
-          mbutton('.main .sub .ischeme .semII .programminginc',                  isub.semII[ 2 ], subject);
-          mbutton('.main .sub .ischeme .semII .appliedmathematics',              isub.semII[ 3 ], subject);
-          mbutton('.main .sub .ischeme .semII .elementsofelectricalengineering', isub.semII[ 4 ], subject);
-     break;
-     case 5:
-     hsub = 5;
-          mbutton('.main .sub .gscheme .semIII .digitaltechniques',    gsub.semIII[ 1 ]);
-          mbutton('.main .sub .gscheme .semIII .electricaltechnology', gsub.semIII[ 2 ]);
-          mbutton('.main .sub .gscheme .semIII .appliedmathematics',   gsub.semIII[ 3 ]);
-          mbutton('.main .sub .gscheme .semIII .datastructure',        gsub.semIII[ 4 ]);
-          mbutton('.main .sub .gscheme .semIII .database',             gsub.semIII[ 5 ]);
-     break;
-     case 6:
-     hsub = 6;
-          mbutton('.main .sub .ischeme .semIII .datastructure',             isub.semIII[ 3 ], subject);
-          mbutton('.main .sub .ischeme .semIII .digitaltechniques',         isub.semIII[ 1 ], subject);
-          mbutton('.main .sub .ischeme .semIII .computergraphics',          isub.semIII[ 2 ], subject);
-          mbutton('.main .sub .ischeme .semIII .objectorientedprogramming', isub.semIII[ 4 ], subject);
-          mbutton('.main .sub .ischeme .semIII .database',                  isub.semIII[ 5 ], subject);
-     break;
-     case 7:
-          hsub = 7;
-          mbutton('.main .sub .gscheme .semIV .computernetwork',                gsub.semIV[ 1 ]);
-          mbutton('.main .sub .gscheme .semIV .objectorientedprogramming',      gsub.semIV[ 2 ]);
-          mbutton('.main .sub .gscheme .semIV .microprocessor',                 gsub.semIV[ 3 ]);
-          mbutton('.main .sub .gscheme .semIV .computerhardwareandmaintenance', gsub.semIV[ 4 ]);
-     break;
-     case 8:
-          hsub = 8;
-          mbutton('.main .sub .gscheme .semV .operatingsystem',     gsub.semV[ 1 ]);
-          mbutton('.main .sub .gscheme .semV .compuersecurity',     gsub.semV[ 2 ]);
-          mbutton('.main .sub .gscheme .semV .javaprogramming',     gsub.semV[ 3 ]);
-          mbutton('.main .sub .gscheme .semV .softwareengineering', gsub.semV[ 4 ]);
-          mbutton('.main .sub .gscheme .semV .systemprogramming',   gsub.semV[ 5 ]);
-     break;
-     case 9:
-     hsub = 9;
-     mbutton('.main .sub .gscheme .semVI .softwaretesting',        gsub.semVI[ 1 ], subject);
-     mbutton('.main .sub .gscheme .semVI .emeddedsystem',          gsub.semVI[ 2 ], subject);
-     mbutton('.main .sub .gscheme .semVI .advancedmicroprocessor', gsub.semVI[ 3 ], subject);
-     mbutton('.main .sub .gscheme .semVI .database',               gsub.semVI[ 4 ], subject);
-     break;
-          
+               msem.III();
+          break;
+          case 4:
+               msem.IV();
+          break;
+          case 5:
+               msem.V();
+          break;
+          case 6:
+               msem.VI();
+          break;
      }
      
 }
@@ -395,7 +347,7 @@ var mscheme= {
           remove();
           reset();
           val = 1;
-
+          fbtn1 = 1;
           hbutton(".header .scheme", 'Scheme');
 
           mbutton('.main .sem .semI',   sem[ 0 ], year);
@@ -411,6 +363,7 @@ var mscheme= {
           remove();
           reset();
           val = 0;
+          fbtn1 = 1; 
           hbutton('.header .scheme', 'Scheme');
           mbutton('.main .sem .semI',   sem[ 0 ], year);
           mbutton('.main .sem .semII',  sem[ 1 ], year);
@@ -422,14 +375,14 @@ var msem = {
 
      I : function(){
 
+          hsub = 1;
           remove();
           reset();
           
           hbutton('.header .scheme', "Scheme");
           hbutton('.header .sem', "Sem");
           if(val == 1){
-               
-               hsub = 1;
+               fbtn1 = 2;
                mbutton('.main .sub .gscheme .semI .english',          gsub.semI[ 1 ], subject);
                mbutton('.main .sub .gscheme .semI .basicphysics',     gsub.semI[ 2 ], subject);
                mbutton('.main .sub .gscheme .semI .basicchemistry',   gsub.semI[ 3 ], subject);
@@ -437,8 +390,7 @@ var msem = {
                
           }
           if(val == 0){
-
-               hsub = 2;
+               fbtn1 = 3;
                mbutton('.main .sub .ischeme .semI .english',          isub.semI[ 1 ], subject);
                mbutton('.main .sub .ischeme .semI .basicscience',     isub.semI[ 2 ], subject);
                mbutton('.main .sub .ischeme .semI .basicmathematics', isub.semI[ 3 ], subject);
@@ -448,14 +400,15 @@ var msem = {
      },
      II : function(){
 
-          remove();
+               hsub = 2;
+               remove();
           reset();
 
           hbutton('.header .scheme', 'Scheme');
           hbutton('.header .sem', 'Sem');
           if(val == 1){
 
-               hsub = 3;
+               fbtn1 = 2;
                mbutton('.main .sub .gscheme .semII .appliedphysics',         gsub.semII[ 1 ], subject);
                mbutton('.main .sub .gscheme .semII .progamminginc',          gsub.semII[ 2 ], subject);
                mbutton('.main .sub .gscheme .semII .basicelectronics',       gsub.semII[ 3 ], subject);
@@ -466,7 +419,7 @@ var msem = {
           }
           if(val == 0){
 
-               hsub = 4;
+               fbtn1 = 3;
                mbutton('.main .sub .ischeme .semII .basicelectronics',                isub.semII[ 1 ], subject);
                mbutton('.main .sub .ischeme .semII .programminginc',                  isub.semII[ 2 ], subject);
                mbutton('.main .sub .ischeme .semII .appliedmathematics',              isub.semII[ 3 ], subject);
@@ -477,7 +430,8 @@ var msem = {
      },
      III : function(){
 
-          remove();
+               hsub = 3;
+               remove();
           reset();
 
           hbutton('.header .scheme', "Scheme");
@@ -485,7 +439,7 @@ var msem = {
 
           if(val == 1){
 
-               hsub = 5;
+               fbtn1 = 2;
                mbutton('.main .sub .gscheme .semIII .digitaltechniques',    gsub.semIII[ 1 ]);
                mbutton('.main .sub .gscheme .semIII .electricaltechnology', gsub.semIII[ 2 ]);
                mbutton('.main .sub .gscheme .semIII .appliedmathematics',   gsub.semIII[ 3 ]);
@@ -495,7 +449,7 @@ var msem = {
           }
           if(val == 0){
 
-               hsub = 6;
+               fbtn1 = 3;
                mbutton('.main .sub .ischeme .semIII .datastructure',             isub.semIII[ 3 ], subject);
                mbutton('.main .sub .ischeme .semIII .digitaltechniques',         isub.semIII[ 1 ], subject);
                mbutton('.main .sub .ischeme .semIII .computergraphics',          isub.semIII[ 2 ], subject);
@@ -507,7 +461,8 @@ var msem = {
      },
      IV : function(){
 
-          remove();
+               hsub = 4;
+               remove();
           reset();
 
           hbutton('.header .scheme', "Scheme");
@@ -515,7 +470,7 @@ var msem = {
 
           if(val == 1){
 
-               hsub = 7;
+               fbtn1 = 2;
                mbutton('.main .sub .gscheme .semIV .computernetwork',                gsub.semIV[ 1 ]);
                mbutton('.main .sub .gscheme .semIV .objectorientedprogramming',      gsub.semIV[ 2 ]);
                mbutton('.main .sub .gscheme .semIV .microprocessor',                 gsub.semIV[ 3 ]);
@@ -526,7 +481,8 @@ var msem = {
      },
      V : function(){
 
-          remove();
+               hsub = 5;
+               remove();
           reset();
 
           hbutton('.header .scheme', "Scheme");
@@ -534,7 +490,7 @@ var msem = {
 
           if(val == 1){
 
-               hsub = 8;
+               fbtn1 = 2;
                mbutton('.main .sub .gscheme .semV .operatingsystem',     gsub.semV[ 1 ]);
                mbutton('.main .sub .gscheme .semV .compuersecurity',     gsub.semV[ 2 ]);
                mbutton('.main .sub .gscheme .semV .javaprogramming',     gsub.semV[ 3 ]);
@@ -546,7 +502,8 @@ var msem = {
      },
      VI : function(){
 
-          remove();
+               hsub = 6;
+               remove();
           reset();
 
           hbutton('.header .scheme', "Scheme");
@@ -554,7 +511,7 @@ var msem = {
 
           if(val == 1){
 
-               hsub = 9;
+               fbtn1 = 2;
                mbutton('.main .sub .gscheme .semVI .softwaretesting',        gsub.semVI[ 1 ], subject);
                mbutton('.main .sub .gscheme .semVI .emeddedsystem',          gsub.semVI[ 2 ], subject);
                mbutton('.main .sub .gscheme .semVI .advancedmicroprocessor', gsub.semVI[ 3 ], subject);
@@ -574,6 +531,7 @@ var msub = {
 
                english : function(){
 
+                    fbtn1 = 4;
                     remove();
                     reset();
                     hoyear();
@@ -593,6 +551,7 @@ var msub = {
                },
                basicphysics : function(){
 
+                    fbtn1 = 4;
                     remove();
                     reset();
                     hoyear();
@@ -612,7 +571,7 @@ var msub = {
                },
                basicchemistry : function(){
 
-                    
+                    fbtn1 = 4;
                     remove();
                     reset();
                     hoyear();
@@ -632,6 +591,7 @@ var msub = {
                },
                basicmathematics : function(){
                     
+                    fbtn1 = 4;
                     remove();
                     reset();
                     hoyear();
@@ -655,6 +615,7 @@ var msub = {
                
                appliedphysics : function(){
 
+                    fbtn1 = 5;
                     remove();
                     reset();
                     hoyear();
@@ -674,6 +635,7 @@ var msub = {
                },
                appliedchemistry : function(){
 
+                    fbtn1 = 5;
                     remove();
                     reset();
                     hoyear();
@@ -693,6 +655,7 @@ var msub = {
                },
                basicelectronics : function(){
 
+                    fbtn1 = 5;
                     remove();
                     reset();
                     hoyear();
@@ -712,6 +675,7 @@ var msub = {
                },
                progamminginc : function(){
 
+                    fbtn1 = 5;
                     remove();
                     reset();
                     hoyear();
@@ -731,6 +695,7 @@ var msub = {
                },
                communicationskills : function(){
 
+                    fbtn1 = 5;
                     remove();
                     reset();
                     hoyear();
@@ -750,6 +715,7 @@ var msub = {
                },
                engineeringmathematics : function(){
 
+                    fbtn1 = 5;
                     remove();
                     reset();
                     hoyear();
@@ -773,6 +739,7 @@ var msub = {
 
                digitaltechniques : function(){
 
+                    fbtn1 = 6;
                     remove();
                     reset();
                     hoyear();
@@ -792,6 +759,7 @@ var msub = {
                },
                electricaltechnology : function(){
 
+                    fbtn1 = 6;
                     remove();
                     reset();
                     hoyear();
@@ -811,6 +779,7 @@ var msub = {
                },
                appliedmathematics : function(){
 
+                    fbtn1 = 6;
                     remove();
                     reset();
                     hoyear();
@@ -831,6 +800,7 @@ var msub = {
                },
                datastructure : function(){
 
+                    fbtn1 = 6;
                     remove();
                     reset();
                     hoyear();
@@ -850,6 +820,7 @@ var msub = {
                },
                database : function(){
 
+                    fbtn1 = 6;
                     remove();
                     reset();
                     hoyear();
@@ -873,6 +844,7 @@ var msub = {
 
                computernetwork : function(){
 
+                    fbtn1 = 7;
                     remove();
                     reset();
                     hoyear();
@@ -892,6 +864,7 @@ var msub = {
                },
                objectorientedprogramming : function(){
 
+                    fbtn1 = 7;
                     remove();
                     reset();
                     hoyear();
@@ -911,6 +884,7 @@ var msub = {
                },
                microprocessor : function(){
 
+                    fbtn1 = 7;
                     remove();
                     reset();
                     hoyear();
@@ -930,6 +904,7 @@ var msub = {
                },
                computerhardwareandmaintenance : function(){
 
+                    fbtn1 = 7;
                     remove();
                     reset();
                     hoyear();
@@ -953,6 +928,7 @@ var msub = {
 
                operatingsystem : function(){
 
+                    fbtn1 = 8;
                     remove();
                     reset();
                     hoyear();
@@ -972,6 +948,7 @@ var msub = {
                },
                compuersecurity : function(){
 
+                    fbtn1 = 8;
                     remove();
                     reset();
                     hoyear();
@@ -991,6 +968,7 @@ var msub = {
                },
                javaprogramming : function(){
 
+                    fbtn1 = 8;
                     remove();
                     reset();
                     hoyear();
@@ -1010,6 +988,7 @@ var msub = {
                },
                softwareengineering : function(){
 
+                    fbtn1 = 8;
                     remove();
                     reset();
                     hoyear();
@@ -1029,6 +1008,7 @@ var msub = {
                },
                systemprogramming : function(){
 
+                    fbtn1 = 8;
                     remove();
                     reset();
                     hoyear();
@@ -1052,6 +1032,7 @@ var msub = {
 
                softwaretesting : function(){
 
+                    fbtn1 = 9;
                     remove();
                     reset();
                     hoyear();
@@ -1071,6 +1052,7 @@ var msub = {
                },
                emeddedsystem : function(){
 
+                    fbtn1 = 9;
                     remove();
                     reset();
                     hoyear();
@@ -1090,6 +1072,7 @@ var msub = {
                },
                advancedmicroprocessor : function(){
 
+                    fbtn1 = 9;
                     remove();
                     reset();
                     hoyear();
@@ -1109,6 +1092,7 @@ var msub = {
                },
                database : function(){
 
+                    fbtn1 = 9;
                     remove();
                     reset();
                     hoyear();
@@ -1136,6 +1120,7 @@ var msub = {
 
                english : function(){
 
+                    fbtn1 = 10;
                     remove();
                     reset();
                     hoyear();
@@ -1156,6 +1141,7 @@ var msub = {
                },
                basicscience : function(){
 
+                    fbtn1 = 10;
                     remove();
                     reset();
                     hoyear();
@@ -1176,6 +1162,7 @@ var msub = {
                },
                basicmathematics : function(){
 
+                    fbtn1 = 10;
                     remove();
                     reset();
                     hoyear();
@@ -1200,6 +1187,7 @@ var msub = {
 
                basicelectronics : function(){
 
+                    fbtn1 = 11;
                     remove();
                     reset();
                     hoyear();
@@ -1220,6 +1208,7 @@ var msub = {
                },
                programminginc : function(){
 
+                    fbtn1 = 11;
                     remove();
                     reset();
                     hoyear();
@@ -1240,6 +1229,7 @@ var msub = {
                },
                appliedmathematics : function(){
 
+                    fbtn1 = 11;
                     remove();
                     reset();
                     hoyear();
@@ -1260,6 +1250,7 @@ var msub = {
                },
                elementsofelectricalengineering : function(){
 
+                    fbtn1 = 11;
                     remove();
                     reset();
                     hoyear();
@@ -1284,6 +1275,7 @@ var msub = {
 
                datastructure : function(){
 
+                    fbtn1 = 12;
                     remove();
                     reset();
                     hoyear();
@@ -1304,6 +1296,7 @@ var msub = {
                },
                digitaltechniques : function(){
 
+                    fbtn1 = 12;
                     remove();
                     reset();
                     hoyear();
@@ -1324,6 +1317,7 @@ var msub = {
                },
                computergraphics : function(){
 
+                    fbtn1 = 12;
                     remove();
                     reset();
                     hoyear();
@@ -1344,6 +1338,7 @@ var msub = {
                },
                objectorientedprogramming : function(){
 
+                    fbtn1 = 12;
                     remove();
                     reset();
                     hoyear();
@@ -1364,6 +1359,7 @@ var msub = {
                },
                database : function(){
 
+                    fbtn1 = 12;
                     remove();
                     reset();
                     hoyear();
@@ -1391,133 +1387,126 @@ var msub = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $('document').ready(function(){
 
      mainpage();
+
+
+
+
      $('.header .scheme').click(hscheme);
-     $('.header .sem').click(hsem);
-     $('.header .sub').click(hsub);
-     $('.main .scheme .gscheme').click(mscheme.g);
-     $('.main .scheme .ischeme').click(mscheme.i);
-     $('.main .sem .semI').click(msem.I);
-     $('.main .sem .semII').click(msem.II);
-     $('.main .sem .semIII ').click(msem.III);
-
-     $('.main .sem .semIV').click(msem.IV);
-     $('.main .sem .semV').click(msem.V);
-     $('.main .sem .semVI').click(msem.VI);
+     $('.header .sem')   .click(hsem);
+     $('.header .sub')   .click(hsub);
 
 
 
 
+     $('.main .scheme .gscheme')   .click(mscheme.g);
+     $('.main .scheme .ischeme')   .click(mscheme.i);
 
 
-     $('.main .sub .gscheme .semI .english').click(msub.g.semI.english);
-     $('.main .sub .gscheme .semI .basicphysics').click(msub.g.semI.basicphysics);
-     $('.main .sub .gscheme .semI .basicchemistry').click(msub.g.semI.basicchemistry);
+     $('.main .sem .semI')   .click(msem.I);
+     $('.main .sem .semII')  .click(msem.II);
+     $('.main .sem .semIII') .click(msem.III);
+     $('.main .sem .semIV')  .click(msem.IV);
+     $('.main .sem .semV')   .click(msem.V);
+     $('.main .sem .semVI')  .click(msem.VI);
+
+
+     $('.main .sub .gscheme .semI .english')         .click(msub.g.semI.english);
+     $('.main .sub .gscheme .semI .basicphysics')    .click(msub.g.semI.basicphysics);
+     $('.main .sub .gscheme .semI .basicchemistry')  .click(msub.g.semI.basicchemistry);
      $('.main .sub .gscheme .semI .basicmathematics').click(msub.g.semI.basicmathematics);
 
+     $('.main .sub .gscheme .semII .basicelectronics')       .click(msub.g.semII.basicelectronics);
+     $('.main .sub .gscheme .semII .appliedphysics')         .click(msub.g.semII.appliedphysics);
+     $('.main .sub .gscheme .semII .appliedchemistry')       .click(msub.g.semII.appliedchemistry);
+     $('.main .sub .gscheme .semII .basicelectronics')       .click(msub.g.semII.basicelectronics);
+     $('.main .sub .gscheme .semII .progamminginc')          .click(msub.g.semII.progamminginc);
+     $('.main .sub .gscheme .semII .communicationskills')    .click(msub.g.semII.communicationskills);
+     $('.main .sub .gscheme .semII .engineeringmathematics') .click(msub.g.semII.engineeringmathematics);
 
-     $('.main .sub .gscheme .semII .basicelectronics').click(msub.g.semII.basicelectronics);
-     $('.main .sub .gscheme .semII .appliedphysics').click(msub.g.semII.appliedphysics);
-     $('.main .sub .gscheme .semII .appliedchemistry').click(msub.g.semII.appliedchemistry);
-     $('.main .sub .gscheme .semII .basicelectronics').click(msub.g.semII.basicelectronics);
-     $('.main .sub .gscheme .semII .progamminginc').click(msub.g.semII.progamminginc);
-     $('.main .sub .gscheme .semII .communicationskills').click(msub.g.semII.communicationskills);
-     $('.main .sub .gscheme .semII .engineeringmathematics').click(msub.g.semII.engineeringmathematics);
+     $('.main .sub .gscheme .semIII .digitaltechniques')    .click(msub.g.semIII.digitaltechniques);
+     $('.main .sub .gscheme .semIII .electricaltechnology') .click(msub.g.semIII.electricaltechnology);
+     $('.main .sub .gscheme .semIII .appliedmathematics')   .click(msub.g.semIII.appliedmathematics);
+     $('.main .sub .gscheme .semIII .datastructure')        .click(msub.g.semIII.datastructure);
+     $('.main .sub .gscheme .semIII .database')             .click(msub.g.semIII.database);
 
-     $('.main .sub .gscheme .semIII .digitaltechniques').click(msub.g.semIII.digitaltechniques);
-     $('.main .sub .gscheme .semIII .electricaltechnology').click(msub.g.semIII.electricaltechnology);
-     $('.main .sub .gscheme .semIII .appliedmathematics').click(msub.g.semIII.appliedmathematics);
-     $('.main .sub .gscheme .semIII .datastructure').click(msub.g.semIII.datastructure);
-     $('.main .sub .gscheme .semIII .database').click(msub.g.semIII.database);
+     $('.main .sub .gscheme .semIV .computernetwork')                .click(msub.g.semIV.computernetwork);
+     $('.main .sub .gscheme .semIV .microprocessor')                 .click(msub.g.semIV.microprocessor);
+     $('.main .sub .gscheme .semIV .objectorientedprogramming')      .click(msub.g.semIV.objectorientedprogramming);
+     $('.main .sub .gscheme .semIV .computerhardwareandmaintenance') .click(msub.g.semIV.computerhardwareandmaintenance);
 
+     $('.main .sub .gscheme .semV .operatingsystem')     .click(msub.g.semV.operatingsystem);
+     $('.main .sub .gscheme .semV .compuersecurity')     .click(msub.g.semV.compuersecurity);
+     $('.main .sub .gscheme .semV .javaprogramming')     .click(msub.g.semV.javaprogramming);
+     $('.main .sub .gscheme .semV .softwareengineering') .click(msub.g.semV.softwareengineering);
+     $('.main .sub .gscheme .semV .systemprogramming')   .click(msub.g.semV.systemprogramming);
 
-
-     $('.main .sub .gscheme .semIV .computernetwork').click(msub.g.semIV.computernetwork);
-     $('.main .sub .gscheme .semIV .microprocessor').click(msub.g.semIV.microprocessor);
-     $('.main .sub .gscheme .semIV .objectorientedprogramming').click(msub.g.semIV.objectorientedprogramming);
-     $('.main .sub .gscheme .semIV .computerhardwareandmaintenance').click(msub.g.semIV.computerhardwareandmaintenance);
-
-
-
-     $('.main .sub .gscheme .semV .operatingsystem').click(msub.g.semV.operatingsystem);
+     $('.main .sub .gscheme .semVI .softwaretesting')        .click(msub.g.semVI.softwaretesting);
+     $('.main .sub .gscheme .semVI .emeddedsystem')          .click(msub.g.semVI.emeddedsystem);
+     $('.main .sub .gscheme .semVI .advancedmicroprocessor') .click(msub.g.semVI.advancedmicroprocessor);
+     $('.main .sub .gscheme .semVI .database')               .click(msub.g.semVI.database);
 
 
+     $('.main .sub .ischeme .semI .english')          .click(msub.i.semI.english);
+     $('.main .sub .ischeme .semI .basicscience')     .click(msub.i.semI.basicscience);
+     $('.main .sub .ischeme .semI .basicmathematics') .click(msub.i.semI.basicmathematics);
 
+     $('.main .sub .ischeme .semII .basicelectronics')                .click(msub.i.semII.basicelectronics);
+     $('.main .sub .ischeme .semII .programminginc')                  .click(msub.i.semII.programminginc);
+     $('.main .sub .ischeme .semII .appliedmathematics')  .click(msub.i.semII.appliedmathematics);
+     $('.main .sub .ischeme .semII .elementsofelectricalengineering') .click(msub.i.semII.elementsofelectricalengineering);
 
-     $('.main .sub .gscheme .semV .compuersecurity').click(function(){
+     $('.main .sub .ischeme .semIII .datastructure')             .click(msub.i.semIII.datastructure);
+     $('.main .sub .ischeme .semIII .digitaltechniques')         .click(msub.i.semIII.digitaltechniques);
+     $('.main .sub .ischeme .semIII .computergraphics')          .click(msub.i.semIII.computergraphics);
+     $('.main .sub .ischeme .semIII .objectorientedprogramming') .click(msub.i.semIII.objectorientedprogramming);
+     $('.main .sub .ischeme .semIII .database')                  .click(msub.i.semIII.database);
 
-          
-          
+     $('.fbtn2').click(mainpage);
+
+     $('.fbtn1').click(function(){
+          switch(fbtn1){
+               case 1 : 
+                    mainpage();
+               break;
+               case 2 :
+                    mscheme.g();
+               break;
+               case 3 :
+                    mscheme.i();
+               break;
+               case 4 : 
+                    msem.I();
+               break;
+               case 5 : 
+                    msem.II();
+               break;
+               case 6 : 
+                    msem.III();
+               break;
+               case 7 : 
+                    msem.IV();
+               break;
+               case 8 :
+                    msem.V();
+               break;
+               case 9 : 
+                    msem.VI();
+               break;
+               case 10 : 
+                    msem.I();
+               break;
+               case 11 : 
+                    msem.II();
+               break;
+               case 12 :
+                    msem.III();
+               break;
+               
+          }
           
      });
-     $('.main .sub .gscheme .semV .javaprogramming').click(msub.g.semV.javaprogramming);
-     $('.main .sub .gscheme .semV .softwareengineering').click(msub.g.semV.softwareengineering);
-     $('.main .sub .gscheme .semV .systemprogramming').click(msub.g.semV.systemprogramming);
-
-     $('.main .sub .gscheme .semVI .softwaretesting').click(msub.g.semVI.softwaretesting);
-     $('.main .sub .gscheme .semVI .emeddedsystem').click(msub.g.semVI.emeddedsystem);
-     $('.main .sub .gscheme .semVI .advancedmicroprocessor').click(msub.g.semVI.advancedmicroprocessor);
-     $('.main .sub .gscheme .semVI .database').click(msub.g.semVI.database);
-
-
-     $('.main .sub .ischeme .semI .english').click(msub.i.semI.english);
-     $('.main .sub .ischeme .semI .basicscience').click(msub.i.semI.basicscience);
-     $('.main .sub .ischeme .semI .basicmathematics').click(msub.i.semI.basicmathematics);
-
-     $('.main .sub .ischeme .semII .basicelectronics').click(msub.i.semII.basicelectronics);
-     $('.main .sub .ischeme .semII .programminginc').click(msub.i.semII.programminginc);
-     $('.main .sub .ischeme .semII .appliedmathematics').click(msub.i.semII.appliedmathematics);
-     $('.main .sub .ischeme .semII .elementsofelectricalengineering').click(msub.i.semII.elementsofelectricalengineering);
-
-     $('.main .sub .ischeme .semIII .datastructure').click(msub.i.semIII.datastructure);
-     $('.main .sub .ischeme .semIII .digitaltechniques').click(msub.i.semIII.digitaltechniques);
-     $('.main .sub .ischeme .semIII .computergraphics').click(msub.i.semIII.computergraphics);
-     $('.main .sub .ischeme .semIII .objectorientedprogramming').click(msub.i.semIII.objectorientedprogramming);
-     $('.main .sub .ischeme .semIII .database').click(msub.i.semIII.database);
-
 
 });
